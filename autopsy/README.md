@@ -19,6 +19,7 @@ To perform a forensic investigation using Autopsy by creating a case, analyzing 
 - Click **Create New Case**.
 - Enter case name, number, examiner details.
 - Choose case directory and click **Finish**.
+<img width="842" height="530" alt="Image" src="https://github.com/user-attachments/assets/39199cfd-f2cf-4f90-ae2a-7f142e824b71" />
 
 ---
 
@@ -34,6 +35,8 @@ To perform a forensic investigation using Autopsy by creating a case, analyzing 
 - Autopsy will process the data source.
 - Status and module progress can be viewed in the **Ingest Inbox**.
 
+<img width="759" height="478" alt="Image" src="https://github.com/user-attachments/assets/bdb18612-4ac6-4e57-ba0e-f32bffa6eedc" />
+
 ---
 
 ### **4. View Artifacts**
@@ -44,6 +47,8 @@ Autopsy extracts multiple types of artifacts automatically:
 - **File System Structure**
 - **User Activity**
 - **Recent Documents**
+- 
+<img width="940" height="592" alt="Image" src="https://github.com/user-attachments/assets/585f46e3-52a7-40b8-8f21-4bfb95f1d6ad" />
 
 ---
 
@@ -64,6 +69,8 @@ Autopsy extracts multiple types of artifacts automatically:
 ---
 
 
+<img width="940" height="592" alt="Image" src="https://github.com/user-attachments/assets/911912ed-cb51-4a6f-8015-6ef50c0ffd16" />
+
 - Go to **Generate Report**.
 - Choose report format:
   - **HTML**
@@ -71,6 +78,7 @@ Autopsy extracts multiple types of artifacts automatically:
   - **Excel**
 - Select the artifacts to include.
 - Export and save the report.
+- 
 
 ---
 
