@@ -1,87 +1,92 @@
-# Ex No. 06 – Use Sleuth Kit to Analyze Digital Evidence
+# **Experiment 05: Forensic Investigation Using Autopsy**
 
-## Aim
-To use The Sleuth Kit (TSK) command-line tools to analyze a disk image and recover digital evidence.
+## **Objective**
+To perform a forensic investigation using Autopsy by creating a case, analyzing digital evidence, extracting artifacts, and generating a detailed forensic report.
 
-## Procedure
-Sleuth Kit is used in digital forensics to analyze disk images and recover crucial evidence. It allows the examination of file systems, listing of files and partitions, recovery of deleted files, extraction of metadata, and timeline analysis to understand file activity. Findings can be compiled into a digital forensic report for secure storage.
+---
 
-## Step 1: Install Sleuth Kit
-### Download Sleuth Kit
-- Visit the official Sleuth Kit website or a provided Google Drive link.
-- Download the latest version compatible with Windows.
+## **Tools Used**
+- Autopsy Forensic Tool
+- Operating System: Windows/Linux
+- Disk Image (E01, DD, IMG, RAW)
 
-### Install Sleuth Kit
-- Run the downloaded installer.
-- Follow the on-screen instructions to complete installation.
+---
 
-## Step 2: Acquire the Disk Image
-A disk image is required before analysis. This can be a copy of a hard disk, pen drive, memory card, etc.
+## **Procedure**
 
-### Create Disk Image
-Use a tool like FTK Imager or dd to create a bit-by-bit copy of the storage device.
+### **1. Create a New Case**
+- Open Autopsy.
+- Click **Create New Case**.
+- Enter case name, number, examiner details.
+- Choose case directory and click **Finish**.
 
-Supported formats:
-- .dd
-- .raw
-- .img
-- .E01
+---
 
-### Example Evidence Files
-- 4Dell Latitude CPi.E01
-- 4Dell Latitude CPi.E02
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4a8b9abf-8ccf-47e7-a967-abc493c7f61e" />
+### **2. Add Data Source**
+- Select **Add Data Source**.
+- Choose **Disk Image** / **Local Drive**.
+- Browse and load the evidence file.
+- Configure ingest modules as required.
 
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c04e373e-391b-4f3b-864a-55c5e7c0f1ff" />
+---
 
-## Step 3: Mount the Disk Image (Optional)
-Mounting helps in navigating the file system manually.
+### **3. Monitor Ingest Progress**
+- Autopsy will process the data source.
+- Status and module progress can be viewed in the **Ingest Inbox**.
 
-### Mount Using OSFMount
-- Use OSFMount to mount the .E01 image as a virtual drive.
+---
 
-## Step 4: Analyze the File System Using Sleuth Kit
-Open Command Prompt and navigate to the Sleuth Kit installation folder.
+### **4. View Artifacts**
+Autopsy extracts multiple types of artifacts automatically:
+- **Web History** (URLs, downloads, cookies)
+- **Emails**
+- **Installed Programs**
+- **File System Structure**
+- **User Activity**
+- **Recent Documents**
 
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/477f7ead-8edf-4f77-b9f1-e1fb76c83cd0" />
+---
 
-```<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4915d425-61e6-459f-94cf-e67a1a224351" />
+### **5. Detailed Analysis**
 
-### Identify File System Type – fsstat
-```
-fsstat "4Dell Latitude CPi.E01" > filesystem_info.txt
-```
+#### ✅ Keyword Search
+- Use keyword list or search bar for specific terms.
 
-### List Partitions – mmls
-```
-mmls "4Dell Latitude CPi.E01" > partitions.txt
+#### ✅ File System Browsing
+- Explore directories, hidden files, deleted files.
 
-### List All Files – fls
-```
-fls -r "4Dell Latitude CPi.E01" > file_list.txt
-```
+#### ✅ Timeline Visualization
+- View file activity in chronological order.
 
-### Recover Deleted Files – icat
-```
-icat "4Dell Latitude CPi.E01" [inode number] > [output file]
-```
+#### ✅ Hash Comparison
+- Compare file hashes with known databases (NSRL, custom hash sets).
 
-## Step 5: Analyze File Metadata
-### View Metadata – istat
-```
-istat "4Dell Latitude CPi.E01" [inode number] > metadata_info.txt
-```
+---
 
-## Step 6: Timeline Analysis (Optional)
-### Generate Body File
-```
-fls -m / -r "4Dell Latitude CPi.E01" > body.txt
-```
 
-### Create Timeline – mactime
-```
-mactime -b body.txt > timeline.txt
-```
+- Go to **Generate Report**.
+- Choose report format:
+  - **HTML**
+  - **CSV**
+  - **Excel**
+- Select the artifacts to include.
+- Export and save the report.
 
-## Result
-Using The Sleuth Kit on Windows, you can examine disk images, retrieve file information, recover deleted files, extract metadata, and create activity timelines—helping to analyze and preserve digital evidence effectively.
+---
+
+### **7. Close Case & Archive**
+- Close the case from the **Case Menu**.
+- Archive the case for long-term storage.
+
+---
+
+## **Result**
+- Successfully created a forensic case and analyzed digital evidence.
+- Extracted multiple forensic artifacts.
+- Generated a detailed investigation report using Autopsy.
+
+---
+
+## **Conclusion**
+Autopsy provides a comprehensive digital forensic platform with powerful features for case management, artifact extraction, evidence analysis, and report generation. It is widely used for professional forensic investigations.
+
