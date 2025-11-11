@@ -30,6 +30,9 @@ Supported formats:
 ### Example Evidence Files
 - 4Dell Latitude CPi.E01
 - 4Dell Latitude CPi.E02
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4a8b9abf-8ccf-47e7-a967-abc493c7f61e" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c04e373e-391b-4f3b-864a-55c5e7c0f1ff" />
 
 ## Step 3: Mount the Disk Image (Optional)
 Mounting helps in navigating the file system manually.
@@ -40,6 +43,10 @@ Mounting helps in navigating the file system manually.
 ## Step 4: Analyze the File System Using Sleuth Kit
 Open Command Prompt and navigate to the Sleuth Kit installation folder.
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/477f7ead-8edf-4f77-b9f1-e1fb76c83cd0" />
+
+```<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4915d425-61e6-459f-94cf-e67a1a224351" />
+
 ### Identify File System Type – fsstat
 ```
 fsstat "4Dell Latitude CPi.E01" > filesystem_info.txt
@@ -48,7 +55,6 @@ fsstat "4Dell Latitude CPi.E01" > filesystem_info.txt
 ### List Partitions – mmls
 ```
 mmls "4Dell Latitude CPi.E01" > partitions.txt
-```
 
 ### List All Files – fls
 ```
