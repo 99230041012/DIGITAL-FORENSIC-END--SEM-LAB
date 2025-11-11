@@ -80,6 +80,10 @@ Autopsy extracts multiple types of artifacts automatically:
 - Export and save the report.
 - 
 
+<img width="940" height="591" alt="Image" src="https://github.com/user-attachments/assets/e2dd85b5-22af-4624-a32f-f627bbf5811d" />
+
+- 
+
 ---
 
 ### **7. Close Case & Archive**
